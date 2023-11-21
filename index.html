@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1>Bavaria</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container d-flex justify-content-between">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="aboutd.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <button id="registerLoginButton" class="btn btn-dark">
+                    <a class="text-light" href="login.html">Log In</a>
+                </button>
+                <a class="nav-link text-light" href="adminpanel.html">Log as Admin</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" id="showAll">Show All</button>
+                <button class="btn btn-primary" id="showPassengerCar">Passenger Car</button>
+                <button class="btn btn-primary" id="showCrossover">Crossover</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <!-- First row of cars (3 photos) -->
+        <div class="row">
+            <div class="col-md-12 passenger-car">
+                <div class="card h-100">
+                    <img src="http://wp2.carwallpapers.cc/hongqi/h9/2020/Hongqi-H9-2020-3840x2160-005.jpg"
+                        class="card-img-top img-popup" alt="Product 1">
+                        <div class="card-body">
+                            <h2 class="card-title">Passenger car</h2>
+                            <h2>Hongqi H9</h2>
+                            <hr>
+                            <p class="card-text">The Hongqi H9 is a luxury sedan produced by China's FAW Group. It
+                                combines traditional Chinese design elements with modern luxury features. In addition to its
+                                electric variant, the Hongqi H9<span id="dots">...</span>
+                                <span id="more" style="display: none;"> is available with a hybrid powertrain, offering
+                                    both
+                                    electric
+                                    and gasoline-powered driving options. The electric version typically provides an
+                                    electric
+                                    driving range of around 80 to 100 kilometers (50 to 62 miles) on a full charge. It
+                                    features
+                                    a
+                                    spacious and well-appointed interior with high-quality materials, making it a symbol of
+                                    luxury
+                                    and sophistication in the Chinese automotive market.</span>
+                                <button id="btn2" onclick="toggleText()">More</button>
+                                <hr>
+                                <p style="font-size: 20px;" class=""><b><s> 14990.00 $</s> <i style="color: red;"> 12990.00
+                                        $</i></b> </p>
+                                <button class="btn btn-dark add-to-cart" data-product='{
+                                    "name": "Hongqi H9",
+                                    "price": 12990
+                                }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                            </p>
+                        </div>                </div>
+            </div>
+    
+            <div class="col-md-12 crossover">
+                <div class="card h-100">
+                    <img src="https://i.cenyavto.com/2021/06/wj9m-1068x801.jpg" class="card-img-top img-popup" alt="Product 4">
+                    <div class="card-body">
+                        <h2 class="card-title">Crossover</h2>
+                        <h2>Wuling Hong Guang Mini EV</h2>
+                        <hr>
+                        <p class="card-text">This compact electric car can be charged using a standard household<span
+                                id="dots">...</span><span id="more1" style="display: none;">
+                                outlet and provides an electric driving range of approximately 120 to 170 kilometers (75
+                                to
+                                105 miles) on a full charge. </span><button id="btn" onclick="toggleText()">More</button>
+                                <hr>
+                        </p>
+                        <p style="font-size: 20px;" class=""><b><s> 17990.00 $</s> <i style="color: red;"> 15990.00
+                            $</i></b> </p>
+                    <button class="btn btn-dark add-to-cart" data-product='{
+                        "name": "Wuling Hong Guang Mini EV",
+                        "price": 15990
+                    }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                </p>
+                    </div>                </div>
+            </div>
+    
+            <div class="col-md-12 crossover">
+                <div class="card h-100">
+                    <img src="https://sc04.alicdn.com/kf/Ha01c9b1a0f284dc3a623631ccf60d8f0o/223000267/Ha01c9b1a0f284dc3a623631ccf60d8f0o.jpg"
+                        class="card-img-top img-popup" alt="Product 4">
+                        <div class="card-body">
+                            <h2 class="card-title">Crossover</h2>
+                            <h2>BYD Han EV</h2>
+                            <hr>
+                        <p class="card-text">The BYD Han EV is a midsize electric sedan produced by BYD, a leading
+                            Chinese automaker. It features a sleek and modern design and is known for its advanced
+                            technology and performance capabilities. The Han EV can be charged using various methods,
+                            including fast charging, and offers an impressive electric driving range of about 500
+                            kilometers
+                            (310 miles) on a full charge, making it suitable for both urban and long-distance driving.
+                            Its
+                            interior is spacious and well-equipped with high-tech features, including BYD's Blade
+                            Battery
+                            technology.
+                            <hr>
+                        </p>
+                        <p style="font-size: 20px;" class=""><b><s> 18990.00 $</s> <i style="color: red;"> 13990.00
+                            $</i></b> </p>
+                    
+                            <button class="btn btn-dark add-to-cart" data-product='{
+                        "name": "BYD Han EV",
+                        "price": 13990
+                    }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                </p>
+                        </div>                </div>
+            </div>
+        </div>
+    
+        <!-- Second row of cars (3 photos) -->
+        <div class="row">
+            <div class="col-md-12 passenger-car">
+                <div class="card h-100">
+                    <img src="https://avatars.mds.yandex.net/i?id=b69657f3b6d17bb028b5b3d7d5ce6f0d6c7c918f-5669034-images-thumbs&n=13"
+                        class="card-img-top img-popup" alt="Product 7">
+                        class="card-img-top img-popup" alt="Product 1">
+                        <div class="card-body">
+                            <h2 class="card-title">crossover</h2>
+                            <h2>Li Xiang One</h2>
+                            <hr>
+                            <p class="card-text">The Li Xiang One is equipped with a gas turbine range extender, which
+                                significantly extends the electric driving range to approximately 800 kilometers (497 miles)
+                                on a full charge and a full tank of fuel.
+                                <hr>
+                            </p>
+                            <p style="font-size: 20px;" class=""><b><s> 12990.00 $</s> <i style="color: red;"> 11990.00
+                                $</i></b> </p>
+                        <button class="btn btn-dark add-to-cart" data-product='{
+                            "name": "Li Xiang One",
+                            "price": 11990
+                        }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                    </p>
+                        </div>                </div>
+            </div>
+    
+            <div class="col-md-12 crossover">
+                <div class = "card h-100">
+                    <img src="https://avatars.mds.yandex.net/i?id=be0993a9738642c4b0d07643116c15d05aa5d089-7014775-images-thumbs&n=13"
+                        class="card-img-top img-popup" alt="Product 10">
+                        class="card-img-top img-popup" alt="Product 1">
+                        <div class="card-body">
+                            <h2 class="card-title">crossover</h2>
+                            <h2>Changan CS75 Plus</h2>
+                                    <hr>
+                                    <p class="card-text"> This midsize SUV supports fast charging and offers an electric driving
+                                        range of approximately 330 to 400 kilometers (205 to 248 miles) on a full charge.
+                                        <hr>
+                                    </p>
+                                    <p style="font-size: 20px;" class=""><b><s> 15990.00 $</s> <i style="color: red;"> 12990.00
+                                        $</i></b> </p>
+                                <button class="btn btn-dark add-to-cart" data-product='{
+                                    "name": "Changan CS75 Plus",
+                                    "price": 12990
+                                }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                                    </p>
+                        </div>                </div>
+            </div>
+    
+            <div class="col-md-12 crossover">
+                <div class="card h-100">
+                    <img src="https://avatars.mds.yandex.net/i?id=be0993a9738642c4b0d07643116c15d05aa5d089-7014775-images-thumbs&n=13"
+                        class="card-img-top img-popup" alt="Product 11">
+                        class="card-img-top img-popup" alt="Product 7">
+                        <div class="card-body">
+                            <h2 class="card-title">Passenger car</h2>
+                            <h2>Changan CS75 Plus</h2>
+                            <hr>
+                            <p class="card-text"> This midsize SUV supports fast charging and offers an electric driving
+                                range of approximately 330 to 400 kilometers (205 to 248 miles) on a full charge.
+                                <hr>
+                            </p>
+                            <p style="font-size: 20px;" class=""><b><s> 15990.00 $</s> <i style="color: red;"> 12990.00
+                                $</i></b> </p>
+                        <button class="btn btn-dark add-to-cart" data-product='{
+                            "name": "Changan CS75 Plus",
+                            "price": 12990
+                        }'><i class="fas fa-shopping-cart fa-3x"></i></button>
+                            </p>
+                        </div>                </div>
+            </div>
+        </div>
+
+        <script>
+            function rearrangeCards(cards) {
+                const container = document.createElement('div');
+                container.classList.add('row', 'row-cols-1', 'row-cols-md-3', 'g-4');
+        
+                cards.forEach(card => {
+                    const col = document.createElement('div');
+                    col.classList.add('col');
+                    col.appendChild(card);
+                    container.appendChild(col);
+                });
+        
+                return container;
+            }
+        
+            function showAllCards() {
+                console.log('Show All Cards');
+                const cards = document.querySelectorAll('.col-md-4');
+                cards.forEach(card => {
+                    card.parentElement.style.display = 'block';
+                });
+        
+                const allCards = document.querySelectorAll('.col-md-4');
+                const container = rearrangeCards(allCards);
+                const parent = document.querySelector('.container.mt-4');
+                parent.innerHTML = '';
+                parent.appendChild(container);
+            }
+        
+            function showPassengerCarCards() {
+                console.log('Show Passenger Car Cards');
+                const passengerCarCards = document.querySelectorAll('.passenger-car');
+                passengerCarCards.forEach(card => {
+                    card.parentElement.style.display = 'block';
+                });
+        
+                const crossoverCards = document.querySelectorAll('.crossover');
+                crossoverCards.forEach(card => {
+                    card.parentElement.style.display = 'none';
+                });
+        
+                const container = rearrangeCards(passengerCarCards);
+                const parent = document.querySelector('.container.mt-4');
+                parent.innerHTML = '';
+                parent.appendChild(container);
+            }
+        
+            function showCrossoverCards() {
+                console.log('Show Crossover Cards');
+                const crossoverCards = document.querySelectorAll('.crossover');
+                crossoverCards.forEach(card => {
+                    card.parentElement.style.display = 'block';
+                });
+        
+                const passengerCarCards = document.querySelectorAll('.passenger-car');
+                passengerCarCards.forEach(card => {
+                    card.parentElement.style.display = 'none';
+                });
+        
+                const container = rearrangeCards(crossoverCards);
+                const parent = document.querySelector('.container.mt-4');
+                parent.innerHTML = '';
+                parent.appendChild(container);
+            }
+        
+            document.getElementById('showAll').addEventListener('click', showAllCards);
+            document.getElementById('showPassengerCar').addEventListener('click', showPassengerCarCards);
+            document.getElementById('showCrossover').addEventListener('click', showCrossoverCards);
+        
+            // Rest of your existing code...
+        
+        </script>
+        
+        
+        
+        
+    
+    
+    <section class="container mt-4  ">
+        <div class="row">
+
+
+        </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        $(document).on('click', '.img-popup', function () {
+            var imgSrc = $(this).attr('src');
+            $('#modalImage').attr('src', imgSrc);
+            $('#imageModal').modal('show');
+        });
+    </script>
+
+    <div id="buyModal" class="modal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fill the data to buy:</h5>
+                    <button type="button" id="modBut" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="purchaseForm">
+                        <div class="form-group">
+                            <label for="cardNumber">Card number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Номер карты" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="number" class="form-control" id="cvv" placeholder="CVV" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Buy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="shopping-cart" class="container mt-4">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items" class="list-group"></ul>
+        <button id="checkout" class="btn btn-primary">Buy Now</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0v7ImdM1Pai25Fc8L+OdnvY+kXZI6tnLhqo/g2eLO7UImyjk"
+        crossorigin="anonymous"></script>
+        
+<script>
+    const shoppingCart = [];
+
+    function addToCart(product) {
+        shoppingCart.push(product);
+        displayCart();
+    }
+
+    function removeFromCart(index) {
+        shoppingCart.splice(index, 1);
+        displayCart();
+    }
+
+    function displayCart() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+
+        shoppingCart.forEach((product, index) => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.textContent = `${product.name} - $${product.price}`;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('btn', 'btn-danger', 'float-right');
+            removeButton.addEventListener('click', () => {
+                removeFromCart(index);
+            });
+            li.appendChild(removeButton);
+
+            cartItems.appendChild(li);
+        });
+    }
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const product = JSON.parse(button.getAttribute('data-product'));
+            addToCart(product);
+        });
+    });
+    document.getElementById('checkout').addEventListener('click', () => {
+    window.location.href = 'https://kaspi.kz';
+});
+
+
+    
+</script>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4 text-center">Super sale for cars valid until, Hurry up!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="lead text-center" id="demo">EXPIRED</p>
+        </div>
+    </div>
+</div>
+        
+</body>
+<footer>
+    <p class="text-right">&copy; Bavaria 2023</p>
+</footer>
+
+</html>
